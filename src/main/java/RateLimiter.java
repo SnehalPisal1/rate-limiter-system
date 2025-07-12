@@ -11,3 +11,12 @@ limiter.allowRequest("user1", 4);  // false
 limiter.allowRequest("user1", 61); // true (window resets)
  */
 
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedDeque;
+
+public class RateLimiter {
+
+
+}
+
+
