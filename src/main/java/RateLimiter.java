@@ -16,6 +16,8 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class RateLimiter {
 
+    private final int maxRequest;
+    private final long timeWindow;
 
 }
 
