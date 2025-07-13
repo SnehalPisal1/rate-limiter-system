@@ -19,6 +19,15 @@ public class RateLimiter {
     private final int maxRequest;
     private final long timeWindow;
 
+    ConcurrentHashMap<String, ConcurrentLinkedDeque<Long>> userRequestMap;
+
+    public RateLimiter(int maxRequest, long timeWindow){
+        this.maxRequest = maxRequest;
+        this.timeWindow = timeWindow;
+        userRequestMap =  new ConcurrentHashMap<>();
+    }
+
+
 }
 
 
