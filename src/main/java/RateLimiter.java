@@ -40,6 +40,11 @@ public class RateLimiter {
 
     }
 
+    public synchronized boolean allowRequest(String userId, long reqTimestamp) {
+
+
+    }
+
 }
 
 
