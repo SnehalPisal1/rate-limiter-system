@@ -41,7 +41,12 @@ public class RateLimiter {
     }
 
     public synchronized boolean allowRequest(String userId, long reqTimestamp) {
-
+        ConcurrentLinkedDeque<Long> timestampQueue;
+        if(!userRequestMap.containsKey(userId)){
+            timestampQueue = new ConcurrentLinkedDeque<>();
+        }else {
+            timestampQueue= userRequestMap.get(userId);
+        }
 
     }
 
