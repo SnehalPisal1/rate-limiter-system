@@ -47,6 +47,12 @@ public class RateLimiter {
         }else {
             timestampQueue= userRequestMap.get(userId);
         }
+        if(timestampQueue.size() < maxRequest){
+            timestampQueue.add(reqTimestamp);
+            userRequestMap.put(userId,timestampQueue);
+            return true;
+        }
+        return false;
 
     }
 
